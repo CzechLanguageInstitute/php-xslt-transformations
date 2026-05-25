@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="lex-0">
+   <teiHeader xml:id="ASSC.teiHeader">
+      <fileDesc>
+         <titleStmt xml:id="ASSC.titleStmt">
+            <title type="full">Akademický slovní současné češtiny</title>
+            <title type="abbr">ASSČ</title>
+            <editor>
+               <persName>
+                  <title>Mgr.</title>
+                  <forename>Jan</forename>
+                  <surname>Křivan</surname>
+                  <title>Ph.D.</title>
+               </persName>
+            </editor>
+            <editor>
+               <persName>
+                  <title>Mgr.</title>
+                  <forename>Michaela</forename>
+                  <surname>Lišková</surname>
+                  <title>Ph.D.</title>
+               </persName>
+            </editor>
+            <editor>
+               <persName>
+                  <title>doc. PhDr.</title>
+                  <forename>Jiří</forename>
+                  <surname>Rejzek</surname>
+                  <title>Ph.D.</title>
+               </persName>
+            </editor>
+            <editor>
+               <persName>
+                  <title>Mgr.</title>
+                  <forename>Martin</forename>
+                  <surname>Šemelík</surname>
+                  <title>Ph.D. et al.</title>
+               </persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName>Ústav pro jazyk český AV ČR, v. v. i.</orgName>
+               <placeName>Praha</placeName>
+            </publisher>
+            <authority role="funder">
+               <orgName>Ministerstvo kultury ČR</orgName>
+            </authority>
+            <availability status="restricted">
+               <licence>Ústav pro jazyk český AV ČR, v. v. i.</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <listBibl type="corpora">
+               <bibl/>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language role="objectLanguage" ident="cs"/>
+            <language role="workingLanguage" ident="cs"/>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <entry type="mainEntry" xml:lang="cs" xml:id="ASSC.bimetal.id-400">
+               <form type="lemma" valueDatcat="#lemma-type.1">
+                  <orth>bimetal</orth>
+                  <pron notation="ipa">bɪmetal</pron>
+                  <gramGrp>
+                     <gram type="pos" valueDatcat="#part-of-speech.3">podstatné jméno rodu mužského neživotného</gram>
+                  </gramGrp>
+                  <form type="inflected">
+                     <gramGrp>
+                        <gram type="case" valueDatcat="case.17">2. j.</gram>
+                     </gramGrp>
+                     <orth extent="suffix">-lu</orth>
+                  </form>
+                  <form type="inflected">
+                     <gramGrp>
+                        <gram type="case" valueDatcat="case.4">6. j.</gram>
+                     </gramGrp>
+                     <orth extent="suffix">-lu</orth>
+                  </form>
+                  <cit type="etymon">
+                     <seg>první část</seg>
+                     <lbl>z</lbl>
+                     <lang>latiny</lang>
+                     <seg>druhá část</seg>
+                     <lbl>z</lbl>
+                     <lang>řečtiny</lang>
+                  </cit>
+                  <usg type="domain" valueDatcat="#field-of-use.30">technika</usg>
+               </form>
+               <sense xml:id="ASSC.bimetal.id-400.sense-1">
+                  <num>1</num>
+                  <def>
+                     <hi rend="smaller">kovový materiál (zprav. pásek nebo plech) složený ze dvou vrstev s různou tepelnou roztažností</hi>
+                  </def>
+                  <usg type="domain" valueDatcat="#them-area.13">Technika, technologie</usg>
+                  <usg type="domain" valueDatcat="#them-area.74">Fyzika</usg>
+                  <cit type="example">
+                     <quote>
+                        <hi rend="em">termostat s bimetalem</hi>
+                     </quote>
+                  </cit>
+                  <cit type="example">
+                     <quote>
+                        <hi rend="em">bimetal ve tvaru spirály</hi>
+                     </quote>
+                  </cit>
+                  <cit type="example">
+                     <quote>
+                        <hi rend="em">V žehličce aktivuje bimetal spínače teploty.</hi>
+                     </quote>
+                  </cit>
+               </sense>
+            </entry>
+         </div>
+      </body>
+   </text>
+</TEI>

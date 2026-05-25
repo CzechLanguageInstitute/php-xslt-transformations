@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI type="lex-0" xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader xml:id="ASSC.teiHeader" xmlns="http://www.tei-c.org/ns/1.0" >
+ <fileDesc>
+  <titleStmt xml:id="ASSC.titleStmt">
+   <title type="full">Akademický slovní současné češtiny</title>
+   <title type="abbr">ASSČ</title>
+   <editor>
+    <persName>
+     <title>Mgr.</title>
+     <forename>Jan</forename>
+     <surname>Křivan</surname>
+     <title>Ph.D.</title>
+    </persName>
+   </editor>
+   <editor>
+    <persName>
+     <title>Mgr.</title>
+     <forename>Michaela</forename>
+     <surname>Lišková</surname>
+     <title>Ph.D.</title>
+    </persName>
+   </editor>
+   <editor>
+    <persName>
+     <title>doc. PhDr.</title>
+     <forename>Jiří</forename>
+     <surname>Rejzek</surname>
+     <title>Ph.D.</title>
+    </persName>
+   </editor>
+   <editor>
+    <persName>
+     <title>Mgr.</title>
+     <forename>Martin</forename>
+     <surname>Šemelík</surname>
+     <title>Ph.D. et al.</title>
+    </persName>
+   </editor>
+  </titleStmt>
+  <publicationStmt>
+   <publisher>
+    <orgName>Ústav pro jazyk český AV ČR, v. v. i.</orgName>
+    <placeName>Praha</placeName>
+   </publisher>
+   <authority role="funder">
+    <orgName>Ministerstvo kultury ČR</orgName>
+   </authority>
+   <availability status="restricted">
+    <licence>Ústav pro jazyk český AV ČR, v. v. i.</licence>
+   </availability>
+  </publicationStmt>
+  <sourceDesc>
+   <listBibl type="corpora">
+    <bibl></bibl>
+   </listBibl>
+  </sourceDesc>
+ </fileDesc>
+ <profileDesc>
+  <langUsage>
+   <language role="objectLanguage" ident="cs"/>
+   <language role="workingLanguage" ident="cs"/>
+  </langUsage>
+ </profileDesc>
+</teiHeader>
+ <text>
+  <body>
+   <div></div>
+  </body>
+ </text>
+</TEI>

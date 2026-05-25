@@ -1,0 +1,40 @@
+{
+    "timestamp": "2026-05-25T10:28:39+00:00",
+    "summary": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3
+    },
+    "results": [
+        {
+            "target": "headwords",
+            "lemma-id": "400",
+            "input": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\input\\400.xml",
+            "output": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\output\\headwords\\400.xml",
+            "expected": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\expected\\headwords\\400.xml",
+            "status": "PASSED",
+            "error": null,
+            "diff": false
+        },
+        {
+            "target": "raw",
+            "lemma-id": "400",
+            "input": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\input\\400.xml",
+            "output": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\output\\raw\\400.xml",
+            "expected": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\expected\\raw\\400.xml",
+            "status": "PASSED",
+            "error": null,
+            "diff": false
+        },
+        {
+            "target": "tei-lex-0",
+            "lemma-id": "400",
+            "input": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\input\\400.xml",
+            "output": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\output\\tei-lex-0\\400.xml",
+            "expected": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\expected\\tei-lex-0\\400.xml",
+            "status": "PASSED",
+            "error": null,
+            "diff": false
+        }
+    ]
+}

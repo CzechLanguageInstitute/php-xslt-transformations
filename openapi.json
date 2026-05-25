@@ -1,0 +1,225 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "XSLT Pipeline Test API",
+    "version": "1.0.0",
+    "description": "Testovací endpoint pro aplikaci sekvenčních XSLT 3.0 transformací pomocí Saxon-HE 12.9.",
+    "contact": {
+      "name": "XSLT Pipeline Team"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000",
+      "description": "Lokální vývojový server"
+    },
+    {
+      "url": "https://localhost/api",
+      "description": "Produkční server (HTTPS)"
+    }
+  ],
+  "paths": {
+    "/transform": {
+      "get": {
+        "summary": "Spustí transformaci XML podle lemma-id a target (GET)",
+        "description": "Obdrží dva povinné parametry a vrátí transformovaný XML dokument.",
+        "operationId": "getTransform",
+        "parameters": [
+          {
+            "name": "lemma-id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "description": "Identifikátor vstupního XML souboru bez přípony. Soubor se hledá v adresáři input/",
+            "example": "lemma001"
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "description": "Název složky se sadou XSLT transformací. Složka se hledá v adresáři transforms/",
+            "example": "basic-transform"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Úspěšná transformace - vrácen transformovaný XML",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Chybný požadavek - chybějí povinné parametry nebo jsou neplatné",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "integer",
+                          "example": 400
+                        },
+                        "message": {
+                          "type": "string",
+                          "example": "Missing required parameters: lemma-id, target"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Soubor nebo sada transformací nebyly nalezeny",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "integer",
+                          "example": 404
+                        },
+                        "message": {
+                          "type": "string",
+                          "example": "Input file not found: input/lemma001.xml"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Chyba serveru - transformace selhala",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "integer",
+                          "example": 500
+                        },
+                        "message": {
+                          "type": "string",
+                          "example": "Transformation error: ..."
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Spustí transformaci XML podle lemma-id a target (POST)",
+        "description": "Obdrží JSON payload s parametry a vrátí transformovaný XML dokument.",
+        "operationId": "postTransform",
+        "requestBody": {
+          "required": true,
+          "description": "JSON payload obsahující identifikátor a cílovou sadu transformací",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "lemma-id": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$",
+                    "description": "Identifikátor vstupního XML souboru bez přípony"
+                  },
+                  "target": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$",
+                    "description": "Název složky se sadou XSLT transformací"
+                  }
+                },
+                "required": [
+                  "lemma-id",
+                  "target"
+                ]
+              },
+              "examples": {
+                "basicExample": {
+                  "summary": "Základní příklad",
+                  "value": {
+                    "lemma-id": "lemma001",
+                    "target": "basic-transform"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Úspěšná transformace - vrácen transformovaný XML",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Chybný požadavek - chybí povinné pole nebo je JSON neplatný"
+          },
+          "404": {
+            "description": "Soubor nebo sada transformací nebyly nalezeny"
+          },
+          "500": {
+            "description": "Chyba serveru - transformace selhala"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "integer"
+              },
+              "message": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

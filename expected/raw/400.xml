@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lemma id="400">
+   <variants>
+      <variant id="446">
+         <type>1</type>
+         <sort-order>1</sort-order>
+         <lemma-variant>bimetal</lemma-variant>
+         <lemma-type>
+            <choice id="1">jednoslovné</choice>
+         </lemma-type>
+         <pronunciations>
+            <expression id="447">
+               <text>bɪmetal</text>
+               <comment/>
+            </expression>
+         </pronunciations>
+         <parts-of-speech>
+            <part-of-speech id="443">
+               <choices>
+                  <choice id="3">podstatné jméno rodu mužského neživotného</choice>
+               </choices>
+            </part-of-speech>
+         </parts-of-speech>
+         <morph-chars>
+            <morph-char id="726">
+               <choices>
+                  <choice id="17">2. j.</choice>
+               </choices>
+               <suffixes>
+                  <expression id="811">
+                     <text>-lu</text>
+                     <comment/>
+                  </expression>
+               </suffixes>
+            </morph-char>
+            <morph-char id="727">
+               <choices>
+                  <choice id="4">6. j.</choice>
+               </choices>
+               <suffixes>
+                  <expression id="812">
+                     <text>-lu</text>
+                     <comment/>
+                  </expression>
+               </suffixes>
+            </morph-char>
+         </morph-chars>
+         <origin>
+            <choice id="142">první část</choice>
+            <choice id="14">z latiny</choice>
+            <choice id="143">druhá část</choice>
+            <choice id="20">z řečtiny</choice>
+         </origin>
+         <field-of-use>
+            <choice id="30">technika</choice>
+         </field-of-use>
+         <audio id="446">
+            <filename>446.ogg</filename>
+            <published>0</published>
+         </audio>
+      </variant>
+   </variants>
+   <meanings>
+      <meaning id="657">
+         <sort-order>1</sort-order>
+         <meaning-text-html>&lt;p&gt;&lt;span&gt;kovový materiál (zprav. pásek nebo plech) složený ze dvou vrstev s různou tepelnou roztažností&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;</meaning-text-html>
+         <meaning-text>kovový materiál (zprav. pásek nebo plech) složený ze dvou vrstev s různou tepelnou roztažností</meaning-text>
+         <them-area>
+            <choice id="13">Technika, technologie</choice>
+            <choice id="74">Fyzika</choice>
+         </them-area>
+         <parts-of-speech>
+            <part-of-speech id="66973"/>
+         </parts-of-speech>
+         <exemplifications>
+            <exemplification id="661">
+               <sort-order>1</sort-order>
+               <exemplification-text-html>&lt;p&gt;&lt;span&gt;&lt;em&gt;termostat s bimetalem; bimetal ve tvaru spirály; V žehličce aktivuje bimetal spínače teploty.&lt;br /&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;</exemplification-text-html>
+               <exemplification-text>termostat s bimetalem; bimetal ve tvaru spirály; V žehličce aktivuje bimetal spínače teploty.</exemplification-text>
+            </exemplification>
+         </exemplifications>
+      </meaning>
+   </meanings>
+</lemma>

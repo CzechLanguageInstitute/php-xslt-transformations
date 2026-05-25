@@ -1,0 +1,44 @@
+### GET transform 400(bimetal):raw
+GET http://localhost:8000/transform?lemma-id=400&target=raw
+
+###
+
+### POST transform 400(bimetal):raw
+POST http://localhost:8000/transform
+Content-Type: application/json
+
+{
+  "lemma-id": "400",
+  "target": "raw"
+}
+
+### GET transform 400(bimetal):tei-lex-0
+GET http://localhost:8000/transform?lemma-id=400&target=tei-lex-0
+
+###
+
+### POST transform 400(bimetal):tei-lex-0
+POST http://localhost:8000/transform
+Content-Type: application/json
+
+{
+  "lemma-id": "400",
+  "target": "tei-lex-0"
+}
+
+
+### GET transform 400(bimetal):headwords
+GET http://localhost:8000/transform?lemma-id=400&target=headwords
+
+###
+
+### POST transform 400(bimetal):headwords
+POST http://localhost:8000/transform
+Content-Type: application/json
+
+{
+  "lemma-id": "400",
+  "target": "headwords"
+}
+
+###
