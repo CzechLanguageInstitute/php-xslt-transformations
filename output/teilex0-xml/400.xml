@@ -66,7 +66,10 @@
    <text>
       <body>
          <div>
-            <entry type="mainEntry" xml:lang="cs" xml:id="ASSC.bimetal.id-400">
+            <entry type="mainEntry"
+                   xml:lang="cs"
+                   xml:id="ASSC.bimetal.id-400"
+                   change="#change.2020-09-17T12-18-19">
                <form type="lemma" valueDatcat="#lemma-type.1">
                   <orth>bimetal</orth>
                   <pron notation="ipa">bɪmetal</pron>
@@ -94,14 +97,13 @@
                      <lang>řečtiny</lang>
                   </cit>
                   <usg type="domain" valueDatcat="#field-of-use.30">technika</usg>
+                  <ref type="pronounciation" target="446.ogg" mimeType="audio/ogg"/>
                </form>
                <sense xml:id="ASSC.bimetal.id-400.sense-1">
                   <num>1</num>
                   <def>
                      <hi rend="smaller">kovový materiál (zprav. pásek nebo plech) složený ze dvou vrstev s různou tepelnou roztažností</hi>
                   </def>
-                  <usg type="domain" valueDatcat="#them-area.13">Technika, technologie</usg>
-                  <usg type="domain" valueDatcat="#them-area.74">Fyzika</usg>
                   <cit type="example">
                      <quote>
                         <hi rend="em">termostat s bimetalem</hi>

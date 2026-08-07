@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lemma id="400">
+   <uts>2020-09-17T12:18:19</uts>
    <variants>
       <variant id="446">
          <type>1</type>
@@ -56,7 +57,7 @@
          </field-of-use>
          <audio id="446">
             <filename>446.ogg</filename>
-            <published>0</published>
+            <published>1</published>
          </audio>
       </variant>
    </variants>
@@ -65,10 +66,6 @@
          <sort-order>1</sort-order>
          <meaning-text-html>&lt;p&gt;&lt;span&gt;kovový materiál (zprav. pásek nebo plech) složený ze dvou vrstev s různou tepelnou roztažností&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;</meaning-text-html>
          <meaning-text>kovový materiál (zprav. pásek nebo plech) složený ze dvou vrstev s různou tepelnou roztažností</meaning-text>
-         <them-area>
-            <choice id="13">Technika, technologie</choice>
-            <choice id="74">Fyzika</choice>
-         </them-area>
          <parts-of-speech>
             <part-of-speech id="66973"/>
          </parts-of-speech>

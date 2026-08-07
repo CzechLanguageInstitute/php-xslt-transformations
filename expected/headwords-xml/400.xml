@@ -3,15 +3,16 @@
    <entry>
       <parent_id/>
       <entry_id>400</entry_id>
+      <type>1</type>
+      <sort-order>1</sort-order>
       <variant>bimetal</variant>
-      <homonymy/>
-      <pos/>
-      <gender/>
-      <aspect/>
       <lemma_type>jednoslovné</lemma_type>
+      <homonymy>0</homonymy>
       <pos>N</pos>
       <gender>I</gender>
-      <aspect/>
-      <changed/>
+      <aspect>-</aspect>
+      <uninflected/>
+      <plurality/>
+      <changed>2020-09-17T12:18:19</changed>
    </entry>
 </entries>
