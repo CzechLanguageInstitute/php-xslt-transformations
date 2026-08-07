@@ -38,7 +38,7 @@ $targets = [];
 if (is_dir($transformDir)) {
     $items = scandir($transformDir);
     foreach ($items as $item) {
-        if ($item !== '.' && $item !== '..' && is_dir($transformDir . DIRECTORY_SEPARATOR . $item)) {
+        if ($item !== '.' && $item !== '..' && str_contains($item, '-') && is_dir($transformDir . DIRECTORY_SEPARATOR . $item)) {
             $targets[] = $item;
         }
     }
@@ -91,9 +91,9 @@ foreach ($targets as $target) {
         if (!is_dir($outputTargetDir)) {
             mkdir($outputTargetDir, 0755, true);
         }
-        
-        $outputFile = $outputTargetDir . DIRECTORY_SEPARATOR . $lemmaId . '.xml';
-        $expectedFile = $expectedDir . DIRECTORY_SEPARATOR . $target . DIRECTORY_SEPARATOR . $lemmaId . '.xml';
+        $extension = substr($target, strpos($target, "-") + 1);
+        $outputFile = $outputTargetDir . DIRECTORY_SEPARATOR . $lemmaId . '.' . $extension;
+        $expectedFile = $expectedDir . DIRECTORY_SEPARATOR . $target . DIRECTORY_SEPARATOR . $lemmaId . '.' . $extension;
         
         $testCase = [
             'target' => $target,
