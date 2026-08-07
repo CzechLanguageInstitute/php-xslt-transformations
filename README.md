@@ -58,7 +58,7 @@ php -S localhost:8000 api.php
 ### GET požadavek
 
 ```bash
-curl "http://localhost:8000/transform?lemma-id=400&target=raw"
+curl "http://localhost:8000/transform?lemma-id=400&target=lemmas-xml"
 ```
 
 ### POST požadavek
@@ -66,7 +66,7 @@ curl "http://localhost:8000/transform?lemma-id=400&target=raw"
 ```bash
 curl -X POST http://localhost:8000/transform \
   -H "Content-Type: application/json" \
-  -d '{"lemma-id":"400","target":"raw"}'
+  -d '{"lemma-id":"400","target":"lemmas-xml"}'
 ```
 
 ## Testování
@@ -115,14 +115,14 @@ Vytvořte adresáře se sadami transformací:
 
 ```text
 transforms/
-├── headwords/
-│   ├── 001-headwords.xsl
-│   ├── 002-pos.xsl
-│   └── 003-list.xsl
-└── raw/
-    └── 001-raw.xsl
-└── tei-lex-0/
-    └── 001-tei-lex-0.xsl
+├── headwords-xml/
+│   ├── 001-variants.xsl
+│   ├── 002-list.xsl
+│   └── 003-expand-values.xsl
+├── lemmas-xml/
+│   ├── 001-xml.xsl
+└── teilex0-0/
+    └── 001-to-teilex0.xsl
 ```
 
 Soubory XSLT **musejí** být pojmenované sekvenčně s prefixem `NNN-` (000-999).
@@ -138,14 +138,15 @@ expected/
 │   ├── 1.xml
 │   ├── 400.xml
 │   └── 31622.xml
-├── raw/
+├── headwords-xml/
 │   ├── 1.xml
 │   ├── 400.xml
 │   └── 31622.xml
-└── tei-lex-0/
+└── teilex0-xml/
     ├── 1.xml
     ├── 400.xml
-    └── 31622.xml```
+    └── 31622.xml
+```
 
 ## OpenAPI schéma
 
@@ -156,9 +157,9 @@ OpenAPI dokumentace je k dispozici v souboru `openapi.json`.
 Parametry (query string):
 
 - `lemma-id` (povinný): Identifikátor vstupního souboru, tj. název souboru bez přípony
-- `target` (povinný): Sada transformací, tj. označení složky, která sadu transformací obsahuje
+- `target` (povinný): Sada transformací, tj. označení složky, která sadu transformací obsahuje. Označení v názvu obsahuje za pomlčkou typ výstupu (např. `xml` nebo `tsv`), na základě kterého se generuje odpovídají `Content-Type` v hlavičce odpovědi REST API.
 
-Odpovědí: 200 (XML), 400 (chyba validace), 404 (soubor nenalezen), 500 (chyba serveru)
+Odpovědi: 200 (XML), 400 (chyba validace), 404 (soubor nenalezen), 500 (chyba serveru)
 
 ### POST /transform
 
@@ -171,7 +172,7 @@ Tělo požadavku (JSON):
 }
 ```
 
-Odpovědí: 200 (XML), 400 (chyba validace), 404 (soubor nenalezen), 500 (chyba serveru)
+Odpovědi: 200 (XML), 400 (chyba validace), 404 (soubor nenalezen), 500 (chyba serveru)
 
 ## Třída Transformer
 
