@@ -1,44 +1,51 @@
-### GET transform 400(bimetal):raw
-GET http://localhost:8000/transform?lemma-id=400&target=raw
+### GET transform 400(bimetal):lemmas-xml
+GET http://localhost:8000/transform?lemma-id=400&target=lemmas-xml
 
-###
 
-### POST transform 400(bimetal):raw
+### POST transform 400(bimetal):lemmas-xml
 POST http://localhost:8000/transform
 Content-Type: application/json
 
 {
   "lemma-id": "400",
-  "target": "raw"
+  "target": "lemmas-xml"
 }
 
-### GET transform 400(bimetal):tei-lex-0
-GET http://localhost:8000/transform?lemma-id=400&target=tei-lex-0
+### GET transform 400(bimetal):teilex0-xml
+GET http://localhost:8000/transform?lemma-id=400&target=teilex0-xml
 
-###
 
-### POST transform 400(bimetal):tei-lex-0
+### POST transform 400(bimetal):teilex0-xml
 POST http://localhost:8000/transform
 Content-Type: application/json
 
 {
   "lemma-id": "400",
-  "target": "tei-lex-0"
+  "target": "teilex0-xml"
 }
 
 
-### GET transform 400(bimetal):headwords
-GET http://localhost:8000/transform?lemma-id=400&target=headwords
+### GET transform 400(bimetal):headwords-xml
+GET http://localhost:8000/transform?lemma-id=400&target=headwords-xml
 
-###
 
-### POST transform 400(bimetal):headwords
+### POST transform 400(bimetal):headwords-xml
 POST http://localhost:8000/transform
 Content-Type: application/json
 
 {
   "lemma-id": "400",
-  "target": "headwords"
+  "target": "headwords-xml"
 }
 
-###
+### GET transform 400(bimetal):headwords-tsv
+GET http://localhost:8000/transform?lemma-id=400&target=headwords-tsv
+
+### POST transform 400(bimetal):headwords-tsv
+POST http://localhost:8000/transform
+Content-Type: application/json
+
+{
+  "lemma-id": "400",
+  "target": "headwords-tsv"
+}

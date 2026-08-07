@@ -1,37 +1,47 @@
 {
-    "timestamp": "2026-05-25T10:28:39+00:00",
+    "timestamp": "2026-08-07T14:06:06+00:00",
     "summary": {
-        "passed": 3,
+        "passed": 4,
         "failed": 0,
-        "total": 3
+        "total": 4
     },
     "results": [
         {
-            "target": "headwords",
+            "target": "headwords-tsv",
             "lemma-id": "400",
-            "input": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\input\\400.xml",
-            "output": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\output\\headwords\\400.xml",
-            "expected": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\expected\\headwords\\400.xml",
+            "input": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\input\\400.xml",
+            "output": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\output\\headwords-tsv\\400.tsv",
+            "expected": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\expected\\headwords-tsv\\400.tsv",
             "status": "PASSED",
             "error": null,
             "diff": false
         },
         {
-            "target": "raw",
+            "target": "headwords-xml",
             "lemma-id": "400",
-            "input": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\input\\400.xml",
-            "output": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\output\\raw\\400.xml",
-            "expected": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\expected\\raw\\400.xml",
+            "input": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\input\\400.xml",
+            "output": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\output\\headwords-xml\\400.xml",
+            "expected": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\expected\\headwords-xml\\400.xml",
             "status": "PASSED",
             "error": null,
             "diff": false
         },
         {
-            "target": "tei-lex-0",
+            "target": "lemmas-xml",
             "lemma-id": "400",
-            "input": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\input\\400.xml",
-            "output": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\output\\tei-lex-0\\400.xml",
-            "expected": "V:\\Projekty\\UJC\\Alexis\\tei-lex-0\\expected\\tei-lex-0\\400.xml",
+            "input": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\input\\400.xml",
+            "output": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\output\\lemmas-xml\\400.xml",
+            "expected": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\expected\\lemmas-xml\\400.xml",
+            "status": "PASSED",
+            "error": null,
+            "diff": false
+        },
+        {
+            "target": "teilex0-xml",
+            "lemma-id": "400",
+            "input": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\input\\400.xml",
+            "output": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\output\\teilex0-xml\\400.xml",
+            "expected": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\expected\\teilex0-xml\\400.xml",
             "status": "PASSED",
             "error": null,
             "diff": false
