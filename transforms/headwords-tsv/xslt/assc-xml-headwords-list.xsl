@@ -15,25 +15,32 @@
   </xd:desc>
  </xd:doc>
  
- <xsl:import href="../common/_assc-functions.xsl"/>
+ <xsl:import href="./common/_assc-functions.xsl"/>
  
- <xsl:variable name="converters" select="doc('../common/conversion-data.xml')"/>
+ <xsl:param name="converters" select="doc('./common/conversion-data.xml')"/>
  
  <xsl:mode on-no-match="shallow-copy"/>
  
+ <xsl:key name="grammar" match="grammar" use="@text" />
+ 
+ <xsl:output method="xml" indent="yes" />
+ 
+ <xsl:template match="uts" />
+ 
  <xsl:template match="variant">
   <entry>
-   <parent_id />
+   <!-- TODO: cdo-link[1] /kvůli 42532: demonstrující 2  -->
+   <parent_id><xsl:copy select="ancestor::lemma/links/cdo-link[1]/link-main-hid/text()"></xsl:copy></parent_id>
    <entry_id><xsl:value-of select="ancestor::lemma/@id" /></entry_id>
    <xsl:apply-templates />
    <!-- TODO: pokud varianta obsahuje jenom tvar, dohledat další parametry u předchozího?
     vit id 396: barevní
    -->
-   <changed />
+   <changed><xsl:value-of select="ancestor::lemma/uts"/></changed>
   </entry>
  </xsl:template>
  
- <xsl:template match="cdo-link">
+ <xsl:template match="cdo-link[link-slave-hid]">
   <entry>
    <parent_id><xsl:value-of select="ancestor::lemma/@id"/></parent_id>
    <entry_id><xsl:value-of select="link-slave-hid"/></entry_id>
@@ -43,9 +50,13 @@
    <pos />
    <gender />
    <aspect/>
-   <changed />
+   <uninflected/>
+   <plurality />
+   <changed><xsl:value-of select="ancestor::lemma/uts"/></changed>
   </entry>
  </xsl:template>
+ 
+ <xsl:template match="cdo-link[link-main-hid]" />
  
  <xsl:template match="lemma">
   <entries>
@@ -68,18 +79,17 @@
     <xsl:text>*</xsl:text> 
    </xsl:if>
    <xsl:apply-templates /></variant>
-   <xsl:if test="parent::*[not(homonymie)]">
-    <homonymy />
-   </xsl:if>
-   <xsl:if test="parent::*[not(lemma-type)]">
-    <lemma_type />
-   </xsl:if>
-  <xsl:if test="parent::*[not(parts-of-speeches)]">
+  <xsl:if test="not(parent::*[parts-of-speech])">
    <pos />
    <gender />
    <aspect/>
   </xsl:if>
-  
+  <xsl:if test="not(parent::*[gram-info])">
+   <plurality />
+  </xsl:if>
+  <xsl:if test="not(parent::*[morph-chars])">
+   <uninflected />
+  </xsl:if>
  </xsl:template>
  
  <xsl:template match="lemma-type">
@@ -90,11 +100,19 @@
   <homonymy><xsl:apply-templates /></homonymy>
  </xsl:template>
  
+ <xsl:template match="lemma-type[not(*)][parent::variant[type = '0']]" priority="2">
+  <xsl:apply-templates select="../preceding-sibling::variant[type = '1'][1]/lemma-type" />
+ </xsl:template>
+ 
+ <xsl:template match="lemma-type[not(*)]">
+  <xsl:copy-of select="." />
+ </xsl:template>
+ 
  <xsl:template match="lemma-type/choice">
   <lemma_type><xsl:apply-templates /></lemma_type>
  </xsl:template>
  
- <xsl:template match="parts-of-speech">
+ <xsl:template match="parts-of-speech" use-when="false()">
   <xsl:variable name="items" select="part-of-speech/choices/choice"/>
   <xsl:for-each select="('pos', 'gender', 'aspect')">
    <xsl:variable name="type" select="."/>
@@ -105,6 +123,36 @@
    </xsl:call-template>   
   </xsl:for-each>
  </xsl:template>
+ 
+ <xsl:template match="parts-of-speech">
+  <xsl:variable name="items">
+   <xsl:choose>
+    <xsl:when test="self::parts-of-speech[not(*)][parent::variant[type = '0']]">
+     <xsl:copy-of select="../preceding-sibling::variant[type = '1'][1]/parts-of-speech/part-of-speech/choices/choice" />
+    </xsl:when>
+    <xsl:otherwise>
+     <xsl:copy-of select="part-of-speech/choices/choice" />
+    </xsl:otherwise>
+   </xsl:choose>
+  </xsl:variable>
+<!--  <xsl:variable name="items" select="part-of-speech/choices/choice"/>-->
+  <xsl:for-each select="('pos', 'gender', 'aspect')">
+   <xsl:variable name="type" select="."/>
+   <xsl:variable name="grammar" select="key('grammar', $items, $converters/data)"/>
+   <xsl:element name="{$type}">
+    <xsl:value-of select="$grammar/@*[name() = $type]"/>
+   </xsl:element>
+  </xsl:for-each>
+ </xsl:template>
+ 
+ <xsl:template match="gram-info">
+  <plurality><xsl:value-of select="choice"/></plurality>
+ </xsl:template>
+ 
+ <xsl:template match="morph-chars">
+  <uninflected><xsl:value-of select="morph-char/choices/choice"/></uninflected>
+ </xsl:template>
+ 
  
  <xsl:template name="convert-element">
   <xsl:param name="values" as="xs:string*" />

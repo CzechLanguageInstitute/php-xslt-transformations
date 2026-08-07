@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+ <items type="pos">
+  <item key="citoslovce" value="I" />
+  <item key="citoslovečný" value="I"/>
+  <item key="částice" value="T"/>
+  <item key="částicový" value="T"/>
+  <item key="číslovka" value="C"/>
+  <item key="číslovkový" value="C"/>
+  <item key="podstatné" value="N"/>
+  <item key="předložka" value="R"/>
+  <item key="předložkový" value="R"/>
+  <item key="přídavné" value="A"/>
+  <item key="příslovce" value="D"/>
+  <item key="příslovečný" value="D"/>
+  <item key="sloveso" value="V"/>
+  <item key="spojka" value="J"/>
+  <item key="spojkový" value="J"/>
+  <item key="zájmenné" value="P"/>
+  <item key="zájmenný" value="P"/>
+  <item key="zájmeno" value="P"/>
+ </items>
+ <items type="aspect">
+  <item key="dokonavé" value="P"/>
+  <item key="nedokonavé" value="I"/>
+  <!-- TODO: B = kombinace obou -->
+ </items>
+ <items type="aspect-fix">
+  <item key="PI" value="B" />
+  <item key="IP" value="B" />
+ </items>
+ <items type="gender">
+  <item key="mužského" value="M"/>
+  <item key="středního" value="N"/>
+  <item key="ženského" value="F"/>
+  <item key="neživotného" value="I"/>
+  <item key="životného" value="A"/>
+ </items>
+ <items type="gender-fix">
+  <item key="MA" value="M"/>
+  <item key="MI" value="I"/>
+ </items>
+ <grammar-info>
+  <grammar id="2" text="podstatné jméno rodu mužského životného" pos="N" gender="M" />
+  <grammar id="25" text="podstatné jméno rodu mužského životného i neživotného" pos="N" gender="B" />
+  <grammar id="34" text="podstatné jméno rodu mužského životného i ženského" pos="N" gender="M, F" />
+  <grammar id="39" text="podstatné jméno rodu mužského životného i středního" pos="N" gender="M, N" />
+  <grammar id="3" text="podstatné jméno rodu mužského neživotného" pos="N" gender="I" />
+  <grammar id="23" text="podstatné jméno rodu mužského neživotného i životného" pos="N" gender="B" />
+  <grammar id="44" text="podstatné jméno rodu mužského neživotného i ženského" pos="N" gender="I, F" />
+  <grammar id="35" text="podstatné jméno rodu mužského neživotného i středního" pos="N" gender="I, N" />
+  <grammar id="67" text="podstatné jméno rodu mužského neživotného i středního i ženského" pos="N" gender="I, F, N" />
+  <grammar id="4" text="podstatné jméno rodu ženského" pos="N" gender="F" />
+  <grammar id="32" text="podstatné jméno rodu ženského i mužského životného" pos="N" gender="M, F" />
+  <grammar id="46" text="podstatné jméno rodu ženského i mužského neživotného" pos="N" gender="I, F" />
+  <grammar id="66" text="podstatné jméno rodu ženského i mužského neživotného i středního" pos="N" gender="I, F, N" />
+  <grammar id="33" text="podstatné jméno rodu ženského i středního" pos="N" gender="F, N" />
+  <grammar id="5" text="podstatné jméno rodu středního" pos="N" gender="N" />
+  <grammar id="49" text="podstatné jméno rodu středního i mužského životného" pos="N" gender="M, N" />
+  <grammar id="43" text="podstatné jméno rodu středního i mužského neživotného" pos="N" gender="I, N" />
+  <grammar id="37" text="podstatné jméno rodu středního i ženského" pos="N" gender="F, N" />
+  <grammar id="73" text="podstatné jméno rodu středního i ženského i mužského neživotného" pos="N" gender="I, F, N" />
+  <grammar id="6" text="přídavné jméno" pos="A" />
+  <grammar id="19" text="přídavné jméno přivlastňovací" pos="A" />
+  <grammar id="7" text="zájmeno" pos="P" />
+  <grammar id="42" text="zájmeno osobní" pos="P" />
+  <grammar id="41" text="zájmeno přivlastňovací" pos="P" />
+  <grammar id="70" text="zájmenný výraz" pos="P" />
+  <grammar id="8" text="číslovka" pos="C" />
+  <grammar id="65" text="číslovka neurčitá" pos="C" />
+  <grammar id="71" text="číslovkový výraz" pos="C" />
+  <grammar id="10" text="sloveso dokonavé" pos="V" aspect="P" />
+  <grammar id="26" text="sloveso dokonavé i nedokonavé" pos="V" aspect="B" />
+  <grammar id="9" text="sloveso nedokonavé" pos="V" aspect="I" />
+  <grammar id="11" text="sloveso nedokonavé i dokonavé" pos="V" aspect="B" />
+  <grammar id="12" text="příslovce" pos="D" />
+  <grammar id="31" text="zájmenné příslovce" pos="D" />
+  <grammar id="69" text="příslovečný výraz" pos="D" />
+  <grammar id="13" text="předložka" pos="R" />
+  <grammar id="28" text="předložkový výraz" pos="R" />
+  <grammar id="14" text="spojka" pos="J" />
+  <grammar id="29" text="spojkový výraz" pos="J" />
+  <grammar id="15" text="částice" pos="T" />
+  <grammar id="30" text="částicový výraz" pos="T" />
+  <grammar id="16" text="citoslovce" pos="I" />
+  <grammar id="27" text="citoslovečný výraz" pos="I" />
+  <grammar id="47" text="lexikální morfém" />
+  <grammar id="58" text="slovotvorný morfém" />
+  <grammar id="48" text="tvarotvorný morfém" />
+  <grammar id="17" text="nezařazeno" />
+  <grammar id="9" text="zkratka" pos="B" />
+  <grammar id="8" text="značka" pos="B" />
+  <grammar id="jine" text="zájmenná číslovka" pos="P" />
+  <grammar id="jine" text="ustrnulá přechodníková vazba" />
+ </grammar-info>
+</data>

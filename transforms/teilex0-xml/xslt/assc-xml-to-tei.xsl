@@ -6,7 +6,8 @@
  xmlns:tei="http://www.tei-c.org/ns/1.0"
  xmlns="http://www.tei-c.org/ns/1.0"
  xmlns:assc="https://www.daliboris.cz/ns/xslt/assc"
- exclude-result-prefixes="xs math xd tei assc" version="3.0">
+ exclude-result-prefixes="#all" version="3.0"
+ xmlns:fn="http://www.example.com/fn">
 
  <xd:doc scope="stylesheet">
   <xd:desc>
@@ -18,8 +19,9 @@
  
  <xsl:import href="../../common/_string-variables.xsl"  use-when="false()"/>
  <xsl:import href="../common/_string-variables.xsl" use-when="false()"/>
- <xsl:param name="dictionaty-abbr" select="'ASSC'" /> 
+ <xsl:param name="dictionaty-abbr" select="'ASSC'" />
  
+ <xsl:mode on-no-match="shallow-skip" name="change"/>
  
  <xsl:variable name="values" select="map {'lemma' :
    map { 'variant' :
@@ -45,7 +47,7 @@
  </xsl:template>
  
  <xsl:template name="teiHeader">
-  <xsl:copy-of select="doc('../common/assc.teiHeader.xml')/tei:TEI/tei:teiHeader" />
+  <xsl:copy-of select="doc('./common/assc.teiHeader.xml')/tei:TEI/tei:teiHeader" />
  </xsl:template>
  
  <xsl:template match="lemma">
@@ -61,12 +63,22 @@
    </xsl:when>
    <xsl:otherwise>
     <entry type="mainEntry" xml:lang="cs" xml:id="{$entry-id}">
+     <xsl:apply-templates select="uts" mode="change" />
      <xsl:apply-templates />
     </entry>    
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
 
+ 
+ <xsl:template match="uts" mode="change">
+  <xsl:attribute name="change">
+   <xsl:value-of select="'#' || assc:get-change-id(.)"/>
+  </xsl:attribute>
+ </xsl:template>
+
+ <!-- <uts>2020-09-17T12:18:19</uts> -->
+ <xsl:template match="uts" />
  
  <xsl:template match="variants">
   <xsl:apply-templates />
@@ -487,6 +499,11 @@
 <!--  <xsl:variable name="result" select="if($multiple-p) then '&lt;div&gt;' || $result || '&lt;/div&gt;' else $result"/>-->
   <xsl:variable name="result" select="'&lt;div&gt;' || $result || '&lt;/div&gt;'"/>
   <xsl:value-of select="$result"/>
+ </xsl:function>
+ 
+ <xsl:function name="assc:get-change-id">
+  <xsl:param name="date-time" as="xs:string" />
+  <xsl:sequence select="concat('change.', translate($date-time, ':', '-'))"/>
  </xsl:function>
 
 </xsl:stylesheet>
