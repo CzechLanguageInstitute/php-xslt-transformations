@@ -1,2 +1,2 @@
-parent_id	entry_id	type	sort-order	variant	lemma_type	homonymy	pos	gender	aspect	uninflected	plurality	changed
-	400	1	1	bimetal	jednoslovné	0	N	I	-			2020-09-17T12:18:19
+parent_id	entry_id	type	sort-order	variant	lemma_type	homonymy	pos	gender	aspect	uninflected	plurality	changed	state
+	400	1	1	bimetal	jednoslovné	0	N	I	-			2020-09-17T12:18:19	unchanged
