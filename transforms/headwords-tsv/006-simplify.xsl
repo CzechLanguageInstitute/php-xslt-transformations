@@ -3,6 +3,7 @@
                 version="3.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns="https://www.daliboris.cz/ns/xproc/dictionaries/assc/php/transformation">
-   <xsl:import href="./xslt/assc-xml-headwords-to-csv.xsl"/>
-   <xsl:output method="text"/>
+   <xsl:import href="../_xslt/assc-xml-headwords-list-simplify.xsl"/>
+   <xsl:output method="xml"
+               indent="yes"/>
 </xsl:stylesheet>
