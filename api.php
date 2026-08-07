@@ -99,6 +99,11 @@ function performTransform($lemmaId, $target) {
         // Create transformer and perform transformation
         $transformer = new Transformer();
         $result = $transformer->transform($inputFile, $transformDir, true);
+
+        $contentType = getContentTypeForTarget($target);
+        if (!headers_sent() && PHP_SAPI !== 'cli') {
+           header('Content-Type: ' . $contentType);
+        }
         
         // Return XML result
         echo $result;
@@ -118,3 +123,27 @@ function sendError($statusCode, $message) {
         htmlspecialchars($message)
     );
 }
+
+
+  function getContentTypeForTarget($target) {
+        $extension = substr($target, strrpos($target, '-') + 1);
+        return getContentTypeForExtension($extension);
+    }
+    /**
+     * Get content type based on file extension
+     * 
+     * @param string $extension
+     * @return string
+     */
+  function getContentTypeForExtension($extension) {
+        switch (strtolower($extension)) {
+            case 'xml':
+                return 'application/xml';
+            case 'csv':
+                return 'text/csv';
+            case 'tsv':
+                return 'text/tab-separated-values';
+            default:
+                return 'application/octet-stream';
+        }
+    }
