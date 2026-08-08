@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lemmas>
+   <lemma id="57435" change-state="new">
+      <uts>2026-07-10T11:30:16</uts>
+      <variants>
+         <variant id="66745">
+            <type>1</type>
+            <sort-order>1</sort-order>
+            <lemma-variant>autocitace</lemma-variant>
+            <lemma-type>
+               <choice id="1">jednoslovné</choice>
+            </lemma-type>
+            <parts-of-speech>
+               <part-of-speech id="77547">
+                  <choices>
+                     <choice id="4">podstatné jméno rodu ženského</choice>
+                  </choices>
+               </part-of-speech>
+            </parts-of-speech>
+            <morph-chars>
+               <morph-char id="114314">
+                  <choices>
+                     <choice id="17">2. j.</choice>
+                  </choices>
+                  <suffixes>
+                     <expression id="122518">
+                        <text>-ce</text>
+                        <comment/>
+                     </expression>
+                  </suffixes>
+               </morph-char>
+            </morph-chars>
+         </variant>
+      </variants>
+      <meanings>
+         <meaning id="83691">
+            <sort-order>1</sort-order>
+            <meaning-text-html>&lt;p&gt;bibliografická citace sebe sama&lt;/p&gt;</meaning-text-html>
+            <meaning-text>bibliografická citace sebe sama</meaning-text>
+            <parts-of-speech/>
+            <exemplifications>
+               <exemplification id="128067">
+                  <sort-order>1</sort-order>
+                  <exemplification-text-html>&lt;p&gt;&lt;em&gt;nadužívání autocitací; Někteří výzkumníci si také navyšují svůj H-index pomocí autocitací.&lt;/em&gt;&lt;/p&gt;</exemplification-text-html>
+                  <exemplification-text>nadužívání autocitací; Někteří výzkumníci si také navyšují svůj H-index pomocí autocitací.</exemplification-text>
+               </exemplification>
+            </exemplifications>
+         </meaning>
+      </meanings>
+   </lemma>
+   <lemma id="8635" change-state="removed">
+      <uts>2026-07-10T12:01:27</uts>
+      <variants>
+         <variant id="9539">
+            <type>1</type>
+            <sort-order>1</sort-order>
+            <lemma-variant>autocisterna</lemma-variant>
+            <lemma-type>
+               <choice id="1">jednoslovné</choice>
+            </lemma-type>
+            <pronunciations>
+               <expression id="45916">
+                  <text>ʔa͡utocɪsterna</text>
+                  <comment/>
+               </expression>
+            </pronunciations>
+            <parts-of-speech>
+               <part-of-speech id="8145">
+                  <choices>
+                     <choice id="4">podstatné jméno rodu ženského</choice>
+                  </choices>
+               </part-of-speech>
+            </parts-of-speech>
+            <morph-chars>
+               <morph-char id="9031">
+                  <choices>
+                     <choice id="17">2. j.</choice>
+                  </choices>
+                  <suffixes>
+                     <expression id="9837">
+                        <text>-rny</text>
+                        <comment/>
+                     </expression>
+                  </suffixes>
+               </morph-char>
+               <morph-char id="9032">
+                  <choices>
+                     <choice id="7">2. mn.</choice>
+                  </choices>
+                  <suffixes>
+                     <expression id="9838">
+                        <text>-ren</text>
+                        <comment/>
+                     </expression>
+                  </suffixes>
+               </morph-char>
+            </morph-chars>
+            <audio id="9539">
+               <filename>9539.ogg</filename>
+               <published>1</published>
+            </audio>
+         </variant>
+      </variants>
+      <meanings>
+         <meaning id="12504">
+            <sort-order>1</sort-order>
+            <meaning-text-html>&lt;p&gt;automobil s &lt;span id="link-10570"&gt;cisternou&lt;/span&gt; na podvozku určenou k přepravě kapalin a sypkých látek; tato cisterna&lt;/p&gt;</meaning-text-html>
+            <meaning-text>automobil s cisternou na podvozku určenou k přepravě kapalin a sypkých látek; tato cisterna</meaning-text>
+            <parts-of-speech>
+               <part-of-speech id="22641"/>
+            </parts-of-speech>
+            <exemplifications>
+               <exemplification id="16841">
+                  <sort-order>1</sort-order>
+                  <exemplification-text-html>&lt;p&gt;&lt;em&gt;&lt;span&gt;autocisterna na pohonné hmoty; Pitnou vodu budou v celé oblasti rozvážet autocisterny.; Z převržené autocisterny vytékala nebezpečná látka.&lt;/span&gt;&lt;br /&gt;&lt;/em&gt;&lt;/p&gt;</exemplification-text-html>
+                  <exemplification-text>autocisterna na pohonné hmoty; Pitnou vodu budou v celé oblasti rozvážet autocisterny.; Z převržené autocisterny vytékala nebezpečná látka.</exemplification-text>
+               </exemplification>
+            </exemplifications>
+         </meaning>
+      </meanings>
+   </lemma>
+   <lemma id="42123" change-state="updated">
+      <uts>2026-07-10T12:11:35</uts>
+      <variants>
+         <variant id="48979">
+            <type>1</type>
+            <sort-order>1</sort-order>
+            <lemma-variant>komplic</lemma-variant>
+            <lemma-type>
+               <choice id="1">jednoslovné</choice>
+            </lemma-type>
+            <pronunciations>
+               <expression id="101650">
+                  <text>komplɪc</text>
+                  <comment/>
+               </expression>
+            </pronunciations>
+            <parts-of-speech>
+               <part-of-speech id="59802">
+                  <choices>
+                     <choice id="2">podstatné jméno rodu mužského životného</choice>
+                  </choices>
+               </part-of-speech>
+            </parts-of-speech>
+            <morph-chars>
+               <morph-char id="89964">
+                  <choices>
+                     <choice id="17">2. j.</choice>
+                  </choices>
+                  <suffixes>
+                     <expression id="96225">
+                        <text>-ce</text>
+                        <comment/>
+                     </expression>
+                  </suffixes>
+               </morph-char>
+               <morph-char id="90125">
+                  <choices>
+                     <choice id="24">3., 6. j.</choice>
+                  </choices>
+                  <suffixes>
+                     <expression id="96404">
+                        <text>-ci</text>
+                        <comment/>
+                     </expression>
+                     <expression id="96405">
+                        <text>-covi</text>
+                        <comment/>
+                     </expression>
+                  </suffixes>
+               </morph-char>
+               <morph-char id="90127">
+                  <choices>
+                     <choice id="6">1. mn.</choice>
+                  </choices>
+                  <suffixes>
+                     <expression id="96408">
+                        <text>-cové</text>
+                        <comment/>
+                     </expression>
+                     <expression id="96407">
+                        <text>-ci</text>
+                        <comment/>
+                     </expression>
+                  </suffixes>
+               </morph-char>
+            </morph-chars>
+            <styl-qualifier>
+               <choice id="38">kolokviální vyšší</choice>
+            </styl-qualifier>
+            <origin>
+               <choice id="4">z němčiny</choice>
+               <choice id="2">z francouzštiny</choice>
+            </origin>
+         </variant>
+      </variants>
+      <meanings>
+         <meaning id="61567">
+            <sort-order>1</sort-order>
+            <meaning-text-html>&lt;p&gt;spoluúčastník nekalého, neetického, zprav. kriminálního jednání, spolupachatel&lt;/p&gt;</meaning-text-html>
+            <meaning-text>spoluúčastník nekalého, neetického, zprav. kriminálního jednání, spolupachatel</meaning-text>
+            <parts-of-speech/>
+            <exemplifications>
+               <exemplification id="96295">
+                  <sort-order>1</sort-order>
+                  <exemplification-text-html>&lt;p&gt;&lt;em&gt;mladistvý / nezletilý komplic; Zloději a jeho komplicům hrozí pětiletý trest vězení.; &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Komplic pachatele čelí obžalobě z únosu.; Policie intenzivně pátrá po údajných komplicích zadrženého.; Politici se stávají komplici nadnárodních koncernů a víc než o zájmy svých voličů se starají o potřeby mezinárodních molochů. &lt;/em&gt;&lt;/p&gt;</exemplification-text-html>
+                  <exemplification-text>mladistvý / nezletilý komplic; Zloději a jeho komplicům hrozí pětiletý trest vězení.; Komplic pachatele čelí obžalobě z únosu.; Policie intenzivně pátrá po údajných komplicích zadrženého.; Politici se stávají komplici nadnárodních koncernů a víc než o
+       zájmy svých voličů se starají o potřeby mezinárodních molochů. </exemplification-text>
+               </exemplification>
+            </exemplifications>
+         </meaning>
+      </meanings>
+      <links>
+         <cdo-link id="48054">
+            <link-slave-hid>43316</link-slave-hid>
+            <link-rel-type id="3">přihnízdování</link-rel-type>
+            <link-slave-str>komplicka</link-slave-str>
+            <main-places>
+               <main-place id="261751">
+                  <place>heslo</place>
+                  <place-id>42123</place-id>
+               </main-place>
+            </main-places>
+            <slave-places>
+               <slave-place id="46168">
+                  <place>heslo</place>
+                  <place-id>43316</place-id>
+               </slave-place>
+            </slave-places>
+         </cdo-link>
+      </links>
+   </lemma>
+</lemmas>

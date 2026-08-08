@@ -1,17 +1,37 @@
 {
-    "timestamp": "2026-08-07T14:06:06+00:00",
+    "timestamp": "2026-08-07T23:59:19+00:00",
     "summary": {
-        "passed": 4,
+        "passed": 7,
         "failed": 0,
-        "total": 4
+        "total": 8
     },
     "results": [
+        {
+            "target": "headwords-tsv",
+            "lemma-id": "0",
+            "input": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\input\\0.xml",
+            "output": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\output\\headwords-tsv\\0.tsv",
+            "expected": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\expected\\headwords-tsv\\0.tsv",
+            "status": "PASSED",
+            "error": null,
+            "diff": false
+        },
         {
             "target": "headwords-tsv",
             "lemma-id": "400",
             "input": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\input\\400.xml",
             "output": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\output\\headwords-tsv\\400.tsv",
             "expected": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\expected\\headwords-tsv\\400.tsv",
+            "status": "PASSED",
+            "error": null,
+            "diff": false
+        },
+        {
+            "target": "headwords-xml",
+            "lemma-id": "0",
+            "input": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\input\\0.xml",
+            "output": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\output\\headwords-xml\\0.xml",
+            "expected": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\expected\\headwords-xml\\0.xml",
             "status": "PASSED",
             "error": null,
             "diff": false
@@ -28,12 +48,32 @@
         },
         {
             "target": "lemmas-xml",
+            "lemma-id": "0",
+            "input": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\input\\0.xml",
+            "output": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\output\\lemmas-xml\\0.xml",
+            "expected": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\expected\\lemmas-xml\\0.xml",
+            "status": "PASSED",
+            "error": null,
+            "diff": false
+        },
+        {
+            "target": "lemmas-xml",
             "lemma-id": "400",
             "input": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\input\\400.xml",
             "output": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\output\\lemmas-xml\\400.xml",
             "expected": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\expected\\lemmas-xml\\400.xml",
             "status": "PASSED",
             "error": null,
+            "diff": false
+        },
+        {
+            "target": "teilex0-xml",
+            "lemma-id": "0",
+            "input": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\input\\0.xml",
+            "output": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\output\\teilex0-xml\\0.xml",
+            "expected": "V:\\Projekty\\Github\\CzechLanguageInstitute\\php-xslt-transformations\\expected\\teilex0-xml\\0.xml",
+            "status": "SKIPPED",
+            "error": "Expected file not found",
             "diff": false
         },
         {
