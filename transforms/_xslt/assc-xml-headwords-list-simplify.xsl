@@ -14,6 +14,8 @@
       </xd:desc>
    </xd:doc>
    <xsl:mode on-no-match="shallow-copy"/>
+   <xsl:strip-space elements="*"/>
+   <xsl:output indent="yes"/>
    <xsl:template match="dictionary/entries">
       <xsl:apply-templates/>
    </xsl:template>

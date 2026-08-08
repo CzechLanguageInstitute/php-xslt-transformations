@@ -15,6 +15,8 @@
       </xd:desc>
    </xd:doc>
    <xsl:mode on-no-match="shallow-copy"/>
+   <xsl:strip-space elements="*"/>
+   <xsl:output indent="yes"/>
    <xsl:template match="pos[not(node())] | gender[not(node())] | aspect[not(node())]">
       <xsl:copy>
          <xsl:value-of select="'-'"/>
