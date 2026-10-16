@@ -6,14 +6,25 @@
  */
 
 class Transformer {
-    private $saxonJarPath;
+    
+    private $saxonJarPath = null;
+    private ?string $saxonBashPath = null;
+    private ?string $commandSuffix = null;
     private $tempDir;
     
-    public function __construct($saxonJarPath = null) {
+    /**
+     * Constructor
+     * @param string|null $saxonJarPath Path to Saxon-HE JAR file (optional)
+     * @param string|null $saxonBashPath Path to Saxon-HE bash script (optional, for custom installations, has priority over jar path)
+     * @param string|null $commandSuffix Suffix for the Saxon command (optional)
+     */
+    public function __construct($saxonJarPath = null, $saxonBashPath = null, $commandSuffix = null) {
         if ($saxonJarPath === null) {
             $saxonJarPath = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'saxon-he-12.9.jar';
         }
         $this->saxonJarPath = $saxonJarPath;
+        $this->saxonBashPath = $saxonBashPath;
+        $this->commandSuffix = $commandSuffix;
         $this->tempDir = sys_get_temp_dir();
     }
     
@@ -111,19 +122,34 @@ class Transformer {
      * @param string $outputPath
      * @throws Exception
      */
-    private function applyXslt($inputPath, $xsltPath, $outputPath) {
+    private function applyXslt($inputPath, $xsltPath, $outputPath, $showDetailErrMsg = false) {
         // Build Saxon command
         // Saxon-HE requires Java to be installed
-        $javaCmd = $this->getJavaCommand();
         
-        $command = sprintf(
-            '%s -jar %s -s:%s -xsl:%s -o:%s',
-            $javaCmd,
-            escapeshellarg($this->saxonJarPath),
-            escapeshellarg($inputPath),
-            escapeshellarg($xsltPath),
-            escapeshellarg($outputPath)
-        );
+        if ($this->saxonBashPath !== null) {
+            $command = sprintf(
+                '%s -s:%s -xsl:%s -o:%s',
+                escapeshellarg($this->saxonBashPath),
+                escapeshellarg($inputPath),
+                escapeshellarg($xsltPath),
+                escapeshellarg($outputPath)
+            );
+        } else {
+            $javaCmd = $this->getJavaCommand();
+            $command = sprintf(
+                '%s -jar %s -s:%s -xsl:%s -o:%s',
+                $javaCmd,
+                escapeshellarg($this->saxonJarPath),
+                escapeshellarg($inputPath),
+                escapeshellarg($xsltPath),
+                escapeshellarg($outputPath)
+            );
+        }
+        
+        if ($this->commandSuffix !== null) {
+            $command .= " " . $this->commandSuffix;
+        }
+
         
         $output = [];
         $returnCode = 0;
@@ -132,7 +158,11 @@ class Transformer {
         
         if ($returnCode !== 0) {
             $errorMsg = implode("\n", $output);
-            throw new Exception("Saxon-HE execution failed: $errorMsg");
+            if ($showDetailErrMsg) {
+                throw new Exception("Saxon-HE execution failed: $errorMsg (return code: $returnCode)\nCommand: $command");
+            } else {
+                throw new Exception("Saxon-HE execution failed: $errorMsg");
+            }
         }
         
         if (!file_exists($outputPath)) {
